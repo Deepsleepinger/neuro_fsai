@@ -1,0 +1,72 @@
+{
+  "args": {
+    "matrix_tar": "eval_matrices_hdrive_train_excluded/Bai_cdde1.tar.gz",
+    "prepared_data_dir": null,
+    "save_dir": "results/local_checkpoints",
+    "exp_name": "single_neuro_spai_cdde1_embed_h64_e1000",
+    "row_topk": 256,
+    "epochs": 1000,
+    "lr": 0.001,
+    "hidden_dim": 64,
+    "num_iterations": 0,
+    "use_node_embedding": true,
+    "weight_abs": 5.0,
+    "eval_damping_grid": "1.0,0.5,0.25,0.1,0.05,0.01,0.005,0.001",
+    "val_freq": 100,
+    "log_freq": 50,
+    "seed": 1234,
+    "rhs_seed": 20260622,
+    "spilu_drop_tol": 0.0001,
+    "spilu_fill_factor": 10.0,
+    "max_iter": 2000,
+    "rtol": 1e-08
+  },
+  "run_dir": "results/local_checkpoints/single_neuro_spai_cdde1_embed_h64_e1000-rowtop256-20260622-103755",
+  "best_epoch": 500,
+  "best_result": {
+    "iterations": 66,
+    "raw_callback_iterations": 66,
+    "solve_time": 0.01624437898863107,
+    "info": 0,
+    "final_rel": 9.796962648063738e-09
+  },
+  "latest_result": {
+    "iterations": 72,
+    "raw_callback_iterations": 72,
+    "solve_time": 0.018328406033106148,
+    "info": 0,
+    "final_rel": 3.5555007895070677e-09
+  },
+  "baselines": {
+    "identity": {
+      "iterations": 86,
+      "raw_callback_iterations": 86,
+      "solve_time": 0.003467126050963998,
+      "info": 0,
+      "final_rel": 5.531981582093097e-09
+    },
+    "jacobi": {
+      "iterations": 86,
+      "raw_callback_iterations": 86,
+      "solve_time": 0.0028315219678916037,
+      "info": 0,
+      "final_rel": 5.531981582093097e-09
+    },
+    "spilu": {
+      "iterations": 1,
+      "raw_callback_iterations": 1,
+      "solve_time": 0.0002891329932026565,
+      "info": 0,
+      "final_rel": 4.698553463725902e-10
+    },
+    "target_spai": {
+      "iterations": 2000,
+      "raw_callback_iterations": 2000,
+      "solve_time": 0.4995777960284613,
+      "info": 2000,
+      "final_rel": 13.311644675327017
+    }
+  },
+  "target_nnz": 246323,
+  "target_scale": 6.4720721120783296
+}

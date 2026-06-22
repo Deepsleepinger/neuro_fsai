@@ -1,0 +1,128 @@
+device=cuda:0
+run_dir=results/local_checkpoints/single_neuro_spai_cdde1_embed_h64_e1000-rowtop256-20260622-103755
+N=961 A_nnz=4681 target_nnz=246323 scale=3.970703e+00
+target_scale=6.472072e+00 teacher_inverse_absmax=6.472072e+00
+teacher_build_total_time=0.073796s
+baselines={
+  "identity": {
+    "iterations": 86,
+    "raw_callback_iterations": 86,
+    "solve_time": 0.003467126050963998,
+    "info": 0,
+    "final_rel": 5.531981582093097e-09
+  },
+  "jacobi": {
+    "iterations": 86,
+    "raw_callback_iterations": 86,
+    "solve_time": 0.0028315219678916037,
+    "info": 0,
+    "final_rel": 5.531981582093097e-09
+  },
+  "spilu": {
+    "iterations": 1,
+    "raw_callback_iterations": 1,
+    "solve_time": 0.0002891329932026565,
+    "info": 0,
+    "final_rel": 4.698553463725902e-10
+  },
+  "target_spai": {
+    "iterations": 2000,
+    "raw_callback_iterations": 2000,
+    "solve_time": 0.4995777960284613,
+    "info": 2000,
+    "final_rel": 13.311644675327017
+  }
+}
+epoch=0000 loss=4.338357e-01 mae=2.626296e-01 solver_info=0 solver_iter=86 final_rel=5.531982e-09 alpha=1 best_epoch=0 best_iter=86
+epoch=0050 loss=7.162847e-02 mae=1.303104e-01 best_epoch=0
+epoch=0100 loss=3.662970e-02 mae=9.132737e-02 solver_info=0 solver_iter=77 final_rel=9.376502e-09 alpha=0.01 best_epoch=100 best_iter=77
+epoch=0150 loss=1.379479e-02 mae=5.738822e-02 best_epoch=100
+epoch=0200 loss=6.373272e-03 mae=4.030435e-02 solver_info=0 solver_iter=69 final_rel=9.339566e-09 alpha=0.01 best_epoch=200 best_iter=69
+epoch=0250 loss=4.233853e-03 mae=3.285495e-02 best_epoch=200
+epoch=0300 loss=3.649358e-03 mae=2.982510e-02 solver_info=0 solver_iter=69 final_rel=8.167771e-09 alpha=0.05 best_epoch=300 best_iter=69
+epoch=0350 loss=3.300698e-03 mae=2.796055e-02 best_epoch=300
+epoch=0400 loss=2.638755e-03 mae=2.509490e-02 solver_info=0 solver_iter=71 final_rel=9.809970e-09 alpha=0.05 best_epoch=300 best_iter=69
+epoch=0450 loss=2.438969e-03 mae=2.375513e-02 best_epoch=300
+epoch=0500 loss=2.239668e-03 mae=2.265123e-02 solver_info=0 solver_iter=66 final_rel=9.796963e-09 alpha=0.05 best_epoch=500 best_iter=66
+epoch=0550 loss=2.128075e-03 mae=2.211858e-02 best_epoch=500
+epoch=0600 loss=1.985388e-03 mae=2.104051e-02 solver_info=0 solver_iter=71 final_rel=8.292291e-09 alpha=0.05 best_epoch=500 best_iter=66
+epoch=0650 loss=1.968952e-03 mae=2.119849e-02 best_epoch=500
+epoch=0700 loss=1.723640e-03 mae=1.963508e-02 solver_info=0 solver_iter=72 final_rel=1.651806e-09 alpha=0.05 best_epoch=500 best_iter=66
+epoch=0750 loss=1.608619e-03 mae=1.883462e-02 best_epoch=500
+epoch=0800 loss=1.507439e-03 mae=1.817285e-02 solver_info=0 solver_iter=72 final_rel=9.438281e-09 alpha=0.05 best_epoch=500 best_iter=66
+epoch=0850 loss=1.403006e-03 mae=1.748977e-02 best_epoch=500
+epoch=0900 loss=1.307421e-03 mae=1.686628e-02 solver_info=0 solver_iter=72 final_rel=6.300767e-09 alpha=0.01 best_epoch=500 best_iter=66
+epoch=0950 loss=1.463729e-03 mae=1.765121e-02 best_epoch=500
+epoch=1000 loss=1.156816e-03 mae=1.597361e-02 solver_info=0 solver_iter=72 final_rel=3.555501e-09 alpha=0.05 best_epoch=500 best_iter=66
+summary={
+  "args": {
+    "matrix_tar": "eval_matrices_hdrive_train_excluded/Bai_cdde1.tar.gz",
+    "prepared_data_dir": null,
+    "save_dir": "results/local_checkpoints",
+    "exp_name": "single_neuro_spai_cdde1_embed_h64_e1000",
+    "row_topk": 256,
+    "epochs": 1000,
+    "lr": 0.001,
+    "hidden_dim": 64,
+    "num_iterations": 0,
+    "use_node_embedding": true,
+    "weight_abs": 5.0,
+    "eval_damping_grid": "1.0,0.5,0.25,0.1,0.05,0.01,0.005,0.001",
+    "val_freq": 100,
+    "log_freq": 50,
+    "seed": 1234,
+    "rhs_seed": 20260622,
+    "spilu_drop_tol": 0.0001,
+    "spilu_fill_factor": 10.0,
+    "max_iter": 2000,
+    "rtol": 1e-08
+  },
+  "run_dir": "results/local_checkpoints/single_neuro_spai_cdde1_embed_h64_e1000-rowtop256-20260622-103755",
+  "best_epoch": 500,
+  "best_result": {
+    "iterations": 66,
+    "raw_callback_iterations": 66,
+    "solve_time": 0.01624437898863107,
+    "info": 0,
+    "final_rel": 9.796962648063738e-09
+  },
+  "latest_result": {
+    "iterations": 72,
+    "raw_callback_iterations": 72,
+    "solve_time": 0.018328406033106148,
+    "info": 0,
+    "final_rel": 3.5555007895070677e-09
+  },
+  "baselines": {
+    "identity": {
+      "iterations": 86,
+      "raw_callback_iterations": 86,
+      "solve_time": 0.003467126050963998,
+      "info": 0,
+      "final_rel": 5.531981582093097e-09
+    },
+    "jacobi": {
+      "iterations": 86,
+      "raw_callback_iterations": 86,
+      "solve_time": 0.0028315219678916037,
+      "info": 0,
+      "final_rel": 5.531981582093097e-09
+    },
+    "spilu": {
+      "iterations": 1,
+      "raw_callback_iterations": 1,
+      "solve_time": 0.0002891329932026565,
+      "info": 0,
+      "final_rel": 4.698553463725902e-10
+    },
+    "target_spai": {
+      "iterations": 2000,
+      "raw_callback_iterations": 2000,
+      "solve_time": 0.4995777960284613,
+      "info": 2000,
+      "final_rel": 13.311644675327017
+    }
+  },
+  "target_nnz": 246323,
+  "target_scale": 6.4720721120783296
+}

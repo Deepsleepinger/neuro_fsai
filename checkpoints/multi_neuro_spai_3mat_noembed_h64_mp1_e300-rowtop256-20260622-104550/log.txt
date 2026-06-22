@@ -1,0 +1,221 @@
+device=cuda:0
+run_dir=results/local_checkpoints/multi_neuro_spai_3mat_noembed_h64_mp1_e300-rowtop256-20260622-104550
+case=DRIVCAV_cavity05 N=1182 A_nnz=32632 target_nnz=302592 target_scale=7.653690e+03 build_time=0.572s baselines={"identity": {"iterations": 481, "raw_callback_iterations": 481, "solve_time": 0.024683164956513792, "info": 0, "final_rel": 5.073859095995745e-09}, "jacobi": {"iterations": 529, "raw_callback_iterations": 529, "solve_time": 0.027198386029340327, "info": 0, "final_rel": 6.5692920684090075e-09}, "spilu": {"iterations": 2, "raw_callback_iterations": 2, "solve_time": 0.0013495549792423844, "info": 0, "final_rel": 6.139453578425858e-10}, "target_spai": {"iterations": 415, "raw_callback_iterations": 415, "solve_time": 0.137830032967031, "info": 0, "final_rel": 4.7297880039378705e-09}}
+case=Bai_cdde1 N=961 A_nnz=4681 target_nnz=246323 target_scale=6.472072e+00 build_time=0.633s baselines={"identity": {"iterations": 86, "raw_callback_iterations": 86, "solve_time": 0.004364989988971502, "info": 0, "final_rel": 5.531981582093097e-09}, "jacobi": {"iterations": 86, "raw_callback_iterations": 86, "solve_time": 0.004162566969171166, "info": 0, "final_rel": 5.531981582093097e-09}, "spilu": {"iterations": 1, "raw_callback_iterations": 1, "solve_time": 0.0006218419875949621, "info": 0, "final_rel": 4.698553463725902e-10}, "target_spai": {"iterations": 2000, "raw_callback_iterations": 2000, "solve_time": 0.5437372890301049, "info": 2000, "final_rel": 13.311644675327017}}
+case=Bomhof_circuit_1 N=2624 A_nnz=35823 target_nnz=660608 target_scale=1.376071e+04 build_time=0.717s baselines={"identity": {"iterations": 615, "raw_callback_iterations": 615, "solve_time": 0.036168374004773796, "info": 0, "final_rel": 9.99695781700807e-09}, "jacobi": {"iterations": 183, "raw_callback_iterations": 183, "solve_time": 0.011629642976913601, "info": 0, "final_rel": 9.955938383123898e-09}, "spilu": {"iterations": 1, "raw_callback_iterations": 1, "solve_time": 0.0007793779950588942, "info": 0, "final_rel": 7.2200845696296105e-09}, "target_spai": {"iterations": 3, "raw_callback_iterations": 3, "solve_time": 0.002581127977464348, "info": 0, "final_rel": 1.7804116551228414e-12}}
+epoch=0000 loss=1.547678e-01 mae=9.388852e-02 metric=3.979206e+00 best_epoch=0 results={"DRIVCAV_cavity05": {"iter": 496, "info": 0, "alpha": 1.0}, "Bai_cdde1": {"iter": 86, "info": 0, "alpha": 1.0}, "Bomhof_circuit_1": {"iter": 2000, "info": 2000, "alpha": 1.0}}
+epoch=0050 loss=3.917707e-02 mae=7.252549e-02 best_epoch=0
+epoch=0100 loss=2.809926e-02 mae=6.212345e-02 metric=3.644067e+00 best_epoch=100 results={"DRIVCAV_cavity05": {"iter": 2000, "info": 2000, "alpha": 0.001}, "Bai_cdde1": {"iter": 75, "info": 0, "alpha": 0.01}, "Bomhof_circuit_1": {"iter": 11, "info": 0, "alpha": 0.001}}
+epoch=0150 loss=2.563710e-02 mae=6.403736e-02 best_epoch=100
+epoch=0200 loss=1.990319e-02 mae=5.456613e-02 metric=3.663680e+00 best_epoch=100 results={"DRIVCAV_cavity05": {"iter": 2000, "info": 2000, "alpha": 0.001}, "Bai_cdde1": {"iter": 81, "info": 0, "alpha": 0.01}, "Bomhof_circuit_1": {"iter": 9, "info": 0, "alpha": 0.001}}
+epoch=0250 loss=2.239919e-02 mae=5.335572e-02 best_epoch=100
+epoch=0300 loss=1.835820e-02 mae=4.492527e-02 metric=3.664337e+00 best_epoch=100 results={"DRIVCAV_cavity05": {"iter": 2000, "info": 2000, "alpha": 0.001}, "Bai_cdde1": {"iter": 76, "info": 0, "alpha": 0.01}, "Bomhof_circuit_1": {"iter": 20, "info": 0, "alpha": 0.005}}
+summary={
+  "args": {
+    "matrix_tars": [
+      "eval_matrices_hdrive_train_excluded/DRIVCAV_cavity05.tar.gz",
+      "eval_matrices_hdrive_train_excluded/Bai_cdde1.tar.gz",
+      "eval_matrices_hdrive_train_excluded/Bomhof_circuit_1.tar.gz"
+    ],
+    "save_dir": "results/local_checkpoints",
+    "exp_name": "multi_neuro_spai_3mat_noembed_h64_mp1_e300",
+    "row_topk": 256,
+    "epochs": 300,
+    "lr": 0.0001,
+    "hidden_dim": 64,
+    "num_iterations": 1,
+    "weight_abs": 5.0,
+    "eval_damping_grid": "1.0,0.5,0.25,0.1,0.05,0.01,0.005,0.001",
+    "val_freq": 100,
+    "log_freq": 50,
+    "seed": 1234,
+    "rhs_seed": 20260622,
+    "spilu_drop_tol": 0.0001,
+    "spilu_fill_factor": 10.0,
+    "max_iter": 2000,
+    "rtol": 1e-08
+  },
+  "run_dir": "results/local_checkpoints/multi_neuro_spai_3mat_noembed_h64_mp1_e300-rowtop256-20260622-104550",
+  "best_epoch": 100,
+  "best_metric": 3.6440674376244337,
+  "best_results": {
+    "DRIVCAV_cavity05": {
+      "result": {
+        "iterations": 2000,
+        "raw_callback_iterations": 2000,
+        "solve_time": 0.6331127299927175,
+        "info": 2000,
+        "final_rel": 0.0026012420914523055
+      },
+      "alpha": 0.001
+    },
+    "Bai_cdde1": {
+      "result": {
+        "iterations": 75,
+        "raw_callback_iterations": 75,
+        "solve_time": 0.017570180003531277,
+        "info": 0,
+        "final_rel": 9.8633141247177e-09
+      },
+      "alpha": 0.01
+    },
+    "Bomhof_circuit_1": {
+      "result": {
+        "iterations": 11,
+        "raw_callback_iterations": 11,
+        "solve_time": 0.008248334983363748,
+        "info": 0,
+        "final_rel": 9.682587400180968e-09
+      },
+      "alpha": 0.001
+    }
+  },
+  "latest_results": {
+    "DRIVCAV_cavity05": {
+      "result": {
+        "iterations": 2000,
+        "raw_callback_iterations": 2000,
+        "solve_time": 0.6897154239704832,
+        "info": 2000,
+        "final_rel": 0.00447874832022802
+      },
+      "alpha": 0.001
+    },
+    "Bai_cdde1": {
+      "result": {
+        "iterations": 76,
+        "raw_callback_iterations": 76,
+        "solve_time": 0.018813583999872208,
+        "info": 0,
+        "final_rel": 9.762081301664146e-09
+      },
+      "alpha": 0.01
+    },
+    "Bomhof_circuit_1": {
+      "result": {
+        "iterations": 20,
+        "raw_callback_iterations": 20,
+        "solve_time": 0.013212410965934396,
+        "info": 0,
+        "final_rel": 9.583986890802537e-09
+      },
+      "alpha": 0.005
+    }
+  },
+  "cases": [
+    {
+      "name": "DRIVCAV_cavity05",
+      "tar_path": "eval_matrices_hdrive_train_excluded/DRIVCAV_cavity05.tar.gz",
+      "N": 1182,
+      "A_nnz": 32632,
+      "target_nnz": 302592,
+      "target_scale": 7653.689627063657,
+      "baselines": {
+        "identity": {
+          "iterations": 481,
+          "raw_callback_iterations": 481,
+          "solve_time": 0.024683164956513792,
+          "info": 0,
+          "final_rel": 5.073859095995745e-09
+        },
+        "jacobi": {
+          "iterations": 529,
+          "raw_callback_iterations": 529,
+          "solve_time": 0.027198386029340327,
+          "info": 0,
+          "final_rel": 6.5692920684090075e-09
+        },
+        "spilu": {
+          "iterations": 2,
+          "raw_callback_iterations": 2,
+          "solve_time": 0.0013495549792423844,
+          "info": 0,
+          "final_rel": 6.139453578425858e-10
+        },
+        "target_spai": {
+          "iterations": 415,
+          "raw_callback_iterations": 415,
+          "solve_time": 0.137830032967031,
+          "info": 0,
+          "final_rel": 4.7297880039378705e-09
+        }
+      }
+    },
+    {
+      "name": "Bai_cdde1",
+      "tar_path": "eval_matrices_hdrive_train_excluded/Bai_cdde1.tar.gz",
+      "N": 961,
+      "A_nnz": 4681,
+      "target_nnz": 246323,
+      "target_scale": 6.4720721120783296,
+      "baselines": {
+        "identity": {
+          "iterations": 86,
+          "raw_callback_iterations": 86,
+          "solve_time": 0.004364989988971502,
+          "info": 0,
+          "final_rel": 5.531981582093097e-09
+        },
+        "jacobi": {
+          "iterations": 86,
+          "raw_callback_iterations": 86,
+          "solve_time": 0.004162566969171166,
+          "info": 0,
+          "final_rel": 5.531981582093097e-09
+        },
+        "spilu": {
+          "iterations": 1,
+          "raw_callback_iterations": 1,
+          "solve_time": 0.0006218419875949621,
+          "info": 0,
+          "final_rel": 4.698553463725902e-10
+        },
+        "target_spai": {
+          "iterations": 2000,
+          "raw_callback_iterations": 2000,
+          "solve_time": 0.5437372890301049,
+          "info": 2000,
+          "final_rel": 13.311644675327017
+        }
+      }
+    },
+    {
+      "name": "Bomhof_circuit_1",
+      "tar_path": "eval_matrices_hdrive_train_excluded/Bomhof_circuit_1.tar.gz",
+      "N": 2624,
+      "A_nnz": 35823,
+      "target_nnz": 660608,
+      "target_scale": 13760.708287558991,
+      "baselines": {
+        "identity": {
+          "iterations": 615,
+          "raw_callback_iterations": 615,
+          "solve_time": 0.036168374004773796,
+          "info": 0,
+          "final_rel": 9.99695781700807e-09
+        },
+        "jacobi": {
+          "iterations": 183,
+          "raw_callback_iterations": 183,
+          "solve_time": 0.011629642976913601,
+          "info": 0,
+          "final_rel": 9.955938383123898e-09
+        },
+        "spilu": {
+          "iterations": 1,
+          "raw_callback_iterations": 1,
+          "solve_time": 0.0007793779950588942,
+          "info": 0,
+          "final_rel": 7.2200845696296105e-09
+        },
+        "target_spai": {
+          "iterations": 3,
+          "raw_callback_iterations": 3,
+          "solve_time": 0.002581127977464348,
+          "info": 0,
+          "final_rel": 1.7804116551228414e-12
+        }
+      }
+    }
+  ]
+}
